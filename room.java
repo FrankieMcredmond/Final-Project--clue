@@ -8,6 +8,7 @@ public class Room {
 
     public void lookAround(){
         System.out.println("You found a Clue!!!! \n" + this.clue);
+
     }
 
     public void showOptions(){

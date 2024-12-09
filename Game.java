@@ -19,7 +19,7 @@ public class Game {
            do{
                 String response = player.nextLine(); 
                 if(response.contains("left")|| response.contains("right") || response.contains("straight") || response.contains("backwards")){
-                    //ClueMap.move(response); 
+                    //ClueMap.move(response);
                     System.out.println("This one works");  
                 }
                 else if(response.contains("look around")){
