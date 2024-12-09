@@ -19,7 +19,13 @@ public class Game {
            do{
                 String response = player.nextLine(); 
                 if(response.contains("move")){
-                    ClueMap.move(); 
+                    System.out.println("Select A to move up \n Select B to move right \n Select C to move down \n Select D to move left");
+                    String directionInput= player.nextLine();
+                    System.out.println("Direction selected: " + directionInput);
+                    System.out.println("Enter how far you would like to move: ");
+                    int distanceInput= player.nextInt();
+                    System.out.println("Distance selected: " + distanceInput);
+                    ClueMap.move(directionInput, distanceInput);
                     System.out.println("This one works");  
                     
                 }
