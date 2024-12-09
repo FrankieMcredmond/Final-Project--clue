@@ -64,7 +64,6 @@ public class ClueMap {
 
     public static void main(String[] args) {
         ClueMap map= new ClueMap();
-        map.showOptions();
         System.out.println(ClueMap.checkLocation());
         map.move();
 
