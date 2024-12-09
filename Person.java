@@ -11,7 +11,7 @@ public class Person {
     
    }
 
-   }
+   
     public void removeSuspect(String suspect){
 
     } 
