@@ -12,7 +12,7 @@ public class ClueMap {
         
 
     }
-    public static void showOptions(){
+    public void showOptions(){
         if (roomCounter==8){System.out.println("Move, Accuse");}
         else {System.out.println("Move");}
     }
@@ -59,7 +59,7 @@ public class ClueMap {
         if (directionInput == "D"){
             xPosition=- distanceInput;}
         else{}
-        ClueMap.checkLocation();
+        System.out.println( "You are now in the " +ClueMap.checkLocation());
     }
 
 
@@ -67,7 +67,6 @@ public class ClueMap {
 
     public static void main(String[] args) {
         ClueMap map= new ClueMap();
-        map.showOptions();
         System.out.println(ClueMap.checkLocation());
         map.move();
 
