@@ -3,6 +3,8 @@ public class ClueMap {
     public static int xPosition;
     public static int yPosition;
     public  static int roomCounter;
+    public String directionInput;
+    public int distanceInput;
     
     public ClueMap(){
         xPosition=5;
@@ -41,15 +43,7 @@ public class ClueMap {
     }
 
 
-    public static void move (){
-        Scanner mover= new Scanner(System.in);
-        System.out.println("Select A to move up \n Select B to move right \n Select C to move down \n Select D to move left");
-        String directionInput= mover.nextLine();
-        System.out.println("Direction selected: " + directionInput);
-        System.out.println("Enter how far you would like to move: ");
-        int distanceInput= mover.nextInt();
-        System.out.println("Distance selected: " + distanceInput);
-        mover.close();
+    public static void move (String directionInput, int distanceInput){
         if (directionInput == "A"){
             yPosition=+ distanceInput;}
         if (directionInput == "B"){
