@@ -6,7 +6,7 @@ public class Room {
     }
 
 
-    public String lookAround(){
+    public void lookAround(){
         System.out.println("You found a Clue!!!! \n" + this.clue);
     }
 
