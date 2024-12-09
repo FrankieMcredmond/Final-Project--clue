@@ -56,7 +56,7 @@ public class ClueMap {
         if (directionInput == "D"){
             xPosition=- distanceInput;}
         else{}
-        ClueMap.checkLocation();
+        System.out.println( "You are now in the " +ClueMap.checkLocation());
     }
 
 
