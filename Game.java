@@ -21,7 +21,7 @@ public class Game {
                 if(response.contains("move")){
                     ClueMap.move(); 
                     System.out.println("This one works");  
-        
+                    
                 }
                 else if(response.contains("look around")){
                     //room.lookAround(); 
