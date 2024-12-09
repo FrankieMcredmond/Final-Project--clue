@@ -12,10 +12,7 @@ public class ClueMap {
         
 
     }
-    public void showOptions(){
-        if (roomCounter==8){System.out.println("Move, Accuse");}
-        else {System.out.println("Move");}
-    }
+    
 
 
 
