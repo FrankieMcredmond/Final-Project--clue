@@ -12,7 +12,10 @@ public class ClueMap {
         
 
     }
-    
+    public static void showOptions(){
+        if (roomCounter==8){System.out.println("Move, Accuse");}
+        else {System.out.println("Move");}
+    }
 
 
 
@@ -38,7 +41,7 @@ public class ClueMap {
     }
 
 
-    public void move (){
+    public static void move (){
         Scanner mover= new Scanner(System.in);
         System.out.println("Select A to move up \n Select B to move right \n Select C to move down \n Select D to move left");
         String directionInput= mover.nextLine();

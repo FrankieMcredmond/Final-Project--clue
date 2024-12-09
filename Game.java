@@ -18,14 +18,20 @@ public class Game {
             System.out.println("You'll only have three guesses so make them count!");
            do{
                 String response = player.nextLine(); 
-                if(response.contains("left")|| response.contains("right") || response.contains("straight") || response.contains("backwards")){
-                    //ClueMap.move(response);
+                if(response.contains("move")){
+                    ClueMap.move(); 
                     System.out.println("This one works");  
+                    
                 }
                 else if(response.contains("look around")){
-                   // ClueMap.lookAround(); 
+                    //room.lookAround(); 
                     System.out.println("This one too");
                 }
+                else if(response.contains("show options")){
+                    ClueMap.showOptions(); 
+                }
+             
+
                 else if(response.contains("Mr. Green") && response.contains("candlestick") && response.contains("dining room")){
                     System.out.println("You have figured it out! Congratulations!");
                     stillPlaying = false; }
