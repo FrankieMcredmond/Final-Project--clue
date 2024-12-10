@@ -6,6 +6,7 @@ public class Game {
     private String murderWeapon;
     private String murderPlace; 
     private static boolean stillPlaying = true; 
+    private static int guessCounter = 0; 
         
         
         public static void main(String[] args){
@@ -30,18 +31,28 @@ public class Game {
                     
                 }
                 else if(response.contains("look around")){
-                    //room.lookAround(); 
-                    System.out.println("This one too");
+                    //lookAround(); 
+                    System.out.println("You are in a room!");
                 }
                 else if(response.contains("show options")){
                     ClueMap.showOptions(); 
+                }
+                else if (response.contains("accusation")){
+                    System.out.println("What is your accusation?");
+                    String guess = player.nextLine();
+                    if(guess.contains("Mr. Green") && guess.contains("candlestick") && guess.contains("dining room")){
+                     System.out.println("You did it! Congratulations!");
+                    }
+                    else if(guessCounter({
+                        guessCounter++; 
+                    }
                 }
              
 
                 else if(response.contains("Mr. Green") && response.contains("candlestick") && response.contains("dining room")){
                     System.out.println("You have figured it out! Congratulations!");
                     stillPlaying = false; }
-            
+        
 
             } while(stillPlaying);        
 
