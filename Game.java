@@ -26,35 +26,50 @@ public class Game {
                     System.out.println("Enter how far you would like to move: ");
                     int distanceInput= player.nextInt();
                     System.out.println("Distance selected: " + distanceInput);
-                    ClueMap.move(directionInput, distanceInput);
-                    System.out.println("This one works");  
+                    ClueMap.move(directionInput, distanceInput); 
                     
                 }
-                else if(response.contains("look around")){
+                if(response.contains("look around")){
                     //lookAround(); 
                     System.out.println("You are in a room!");
                 }
-                else if(response.contains("show options")){
+               if(response.contains("show options")){
                     ClueMap.showOptions(); 
                 }
-                else if (response.contains("accusation")){
+                if (response.contains("accuse")){
                     System.out.println("What is your accusation?");
                     String guess = player.nextLine();
                     if(guess.contains("Mr. Green") && guess.contains("candlestick") && guess.contains("dining room")){
                      System.out.println("You did it! Congratulations!");
                     }
-                    else if(guessCounter({
+                    else if(guessCounter == 2){
+                        System.out.println("You are out of guesses!");
+                        stillPlaying = false; 
+                        System.out.println("You didn't catch the killer! Try again next time!");
+                    }
+                    else if(guessCounter == 1){
+                        System.out.println("You have one more guess!");
+                        guessCounter++;
+                    }
+                    else if(guessCounter == 0){ 
+                        System.out.println("You have two more guesses!");
                         guessCounter++; 
                     }
                 }
              
 
-                else if(response.contains("Mr. Green") && response.contains("candlestick") && response.contains("dining room")){
+               if(response.contains("Mr. Green") && response.contains("candlestick") && response.contains("dining room")){
                     System.out.println("You have figured it out! Congratulations!");
                     stillPlaying = false; }
+                
+                else{
+                    System.out.println("You can't do that, try move, accuse, or look around.");
+                }
         
 
-            } while(stillPlaying);        
+            } while(stillPlaying);     
+            
+            
 
 
 

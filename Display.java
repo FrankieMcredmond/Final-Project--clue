@@ -16,7 +16,7 @@ public class Display {
 
     public Display() throws IOException
     {
-        BufferedImage img=ImageIO.read(new File("clue.jpeg"));
+        BufferedImage img=ImageIO.read(new File("ClueBoard.png"));
         Image newImage = img.getScaledInstance(720, 720, Image.SCALE_DEFAULT);
         ImageIcon icon=new ImageIcon(newImage);
         JFrame frame=new JFrame();
