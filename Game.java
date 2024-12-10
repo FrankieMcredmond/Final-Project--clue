@@ -1,7 +1,13 @@
 import java.io.IOException;
 import java.util.Scanner; 
 
-public class Game {
+public class Game extends Display {
+    public Game() throws IOException {
+        super();
+        //TODO Auto-generated constructor stub
+    }
+
+
     private String murderer ; 
     private String murderWeapon;
     private String murderPlace; 
@@ -9,7 +15,7 @@ public class Game {
     private static int guessCounter = 0; 
         
         
-        public static void main(String[] args){
+        public static void main(String[] args) throws IOException{
             Scanner player = new Scanner(System.in); 
             System.out.println("Welcome Detective, thank you for making the journey on such short notice.");
             System.out.println("Please get started right away, here are the details:");
@@ -55,7 +61,9 @@ public class Game {
                     else if(guessCounter == 0){ 
                         System.out.println("You have two more guesses!");
                         guessCounter++; 
-                        }
+                        }}
+                 else if(response.equals("map")){
+                   Display image = new Display(); 
                 
                 }
         

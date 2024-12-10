@@ -8,7 +8,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class Display {
+public class Display  {
     public static void main(String avg[]) throws IOException
     {
         Display image=new Display();
