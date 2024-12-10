@@ -58,10 +58,7 @@ public class Game {
                         }
                 
                 }
-                else {
-                    System.out.println("Test");
-                }
-                
+        
 
             } while(stillPlaying);  
             player.close();    
