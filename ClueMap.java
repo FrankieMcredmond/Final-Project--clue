@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 public class ClueMap {
     public static int xPosition;
     public static int yPosition;
@@ -7,8 +7,8 @@ public class ClueMap {
     public int distanceInput;
     
     public ClueMap(){
-        xPosition=5;
-        yPosition=-1;
+        xPosition=0;
+        yPosition=0;
         roomCounter=0;
 
         
@@ -44,15 +44,17 @@ public class ClueMap {
 
 
     public static void move (String directionInput, int distanceInput){
-        if (directionInput == "A"){
+        
+        if (directionInput.equals ("A")){
             yPosition=+ distanceInput;}
-        if (directionInput == "B"){
+        else if (directionInput.equals("B")){
             xPosition=+ distanceInput;}
-        if (directionInput == "C"){
+        else if (directionInput.equals("C")){
             yPosition=- distanceInput;}
-        if (directionInput == "D"){
+        else if (directionInput.equals("D")){
             xPosition=- distanceInput;}
         else{}
+        System.out.println(yPosition);
         System.out.println( "You are now in the " +ClueMap.checkLocation());
     }
 
@@ -62,7 +64,7 @@ public class ClueMap {
     public static void main(String[] args) {
         ClueMap map= new ClueMap();
         System.out.println(ClueMap.checkLocation());
-        map.move();
+        map.move("A", 5);
 
 
 
