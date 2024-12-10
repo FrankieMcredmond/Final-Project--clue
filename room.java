@@ -11,8 +11,7 @@ public class Room {
 
 
     public void lookAround(){
-        System.out.println("You found a Clue!!!! \n" + clue + "\n You also found a potential murder weapon!!!\n  the " + weapon+" does not have blood on it\n");
-        System.out.println("The object you found has been removed from your potential weapon list, would you like to remove any suspects ");
+        System.out.println("You found a Clue!!!! \n" + clue );
 
     }
 

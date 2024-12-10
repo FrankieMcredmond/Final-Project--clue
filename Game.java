@@ -43,7 +43,7 @@ public class Game {
                     if(guess.contains("Mr. Green") && guess.contains("candlestick") && guess.contains("dining room")){
                      System.out.println("You did it! Congratulations!");
                     }
-                    else if(guessCounter({
+                    else if(guessCounter){
                         guessCounter++; 
                     }
                 }
