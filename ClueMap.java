@@ -36,20 +36,28 @@ public class ClueMap {
     public static String checkLocation (){
         if (xPosition>= -10 && xPosition<= -5 && yPosition<=10 && yPosition>=6){
             return("Kitchen");}
-        if (xPosition>=-3 && xPosition<=1 && yPosition<=10 && yPosition>=4) {
+        else if (xPosition>=-3 && xPosition<=1 && yPosition<=10 && yPosition>=4) {
             return("Ballroom");}
-        if (xPosition>=5 && xPosition<=10 && yPosition<=10 && yPosition>=4) {
+        else if (xPosition>=5 && xPosition<=10 && yPosition<=10 && yPosition>=4) {
             return("Conservatory");}
-        if (xPosition>=3 && xPosition<=10 && yPosition<= 2 && yPosition>= -2) {
+        else if (xPosition>=3 && xPosition<=10 && yPosition<= 2 && yPosition>= -2) {
             return("Billiard Room");}
-        if (xPosition>= -10 && xPosition<= -5 && yPosition<= 2 && yPosition>= -3) {
+        else if (xPosition>= -10 && xPosition<= -5 && yPosition<= 2 && yPosition>= -3) {
             return("Dining Room");}
-        if (xPosition>= -10 && xPosition<= -4 && yPosition<= -7 && yPosition>= -10) {
+        else if (xPosition>= -10 && xPosition<= -4 && yPosition<= -7 && yPosition>= -10) {
             return("Lounge");}
-        if (xPosition>= -1 && xPosition<= 2 && yPosition<= -5 && yPosition>= -10) {
+        else if (xPosition>= -1 && xPosition<= 2 && yPosition<= -5 && yPosition>= -10) {
             return("Hall");}
-        if (xPosition>= 5 && xPosition<= 10 && yPosition<= -4 && yPosition>= -10) {
+        else if (xPosition>= 5 && xPosition<= 10 && yPosition<= -4 && yPosition>= -10) {
             return("Study");}
+        else if (xPosition>= 11) {
+            return("Outside");}
+        else if (xPosition<= -11) {
+            return("Outside");} 
+        else if (yPosition>= 11) {
+            return("Outside");} 
+        else if (xPosition<= -11) {
+            return("Outside");} 
         else{
             return ("no room");}
     }
@@ -66,13 +74,24 @@ public class ClueMap {
         else if (directionInput.equals("D")){
             xPosition=- distanceInput;}
         else{}
+        movePrintOut();
+    }
 
+    public static void movePrintOut (){
         if (checkLocation().equals("no room")){
             System.out.println(" You have not discovered a room. Try Again.");
             showOptions();
         }
+        else if(checkLocation().equals("Outside")){
+            System.out.println("\n\n  You accidentally walked outside *THUNDER* You better get back inside before the guard dogs get to you...");
+            xPosition=0;
+            yPosition=0;
+            System.out.println("\n.....\n\n You are now back at your start point safe and sound, only soaking wet.");
+            showOptions();
+        }
         else {System.out.println( " You are now in the " +ClueMap.checkLocation());}
     }
+
 
 
     public static void secretDoor(String location){
@@ -114,10 +133,8 @@ public class ClueMap {
     public static void main(String[] args) {
         new ClueMap();
         move("A", 0);
-        move("A", 5);
-        showOptions();
-        move("B", 5);
-        showOptions();
+        move("A", 12);
+        
 
 
 
