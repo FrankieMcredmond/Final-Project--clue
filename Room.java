@@ -4,22 +4,23 @@ public class Room {
     String weapon;
     boolean blood;
 
-/**
- * 
- * @param name name of room
- * @param clue clue of room
- * @param weapon weapon in room
- * @param blood whether the weapon has blood on it or not
- */
+    /**
+     * 
+     * @param name   name of room
+     * @param clue   clue of room
+     * @param weapon weapon in room
+     * @param blood  whether the weapon has blood on it or not
+     */
     public Room(String name, String clue, String weapon, boolean blood) {
         this.name = name;
         this.clue = clue;
         this.weapon = weapon;
         this.blood = blood;
     }
-/**
- * prints out the clue of that room, and it's weapon
- */
+
+    /**
+     * prints out the clue of that room, and it's weapon
+     */
     public void lookAround() {
         System.out.println("You found a Clue!!!! \n" + clue);
         System.out.println("\n \n It looks like you found a possible weapon too!\n ");

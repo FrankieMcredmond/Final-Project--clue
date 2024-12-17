@@ -6,20 +6,21 @@ public class ClueMap {
     public String directionInput;
     public int distanceInput;
 
-/**
- * Map constructor
- */
+    /**
+     * Map constructor
+     */
     public ClueMap() {
         xPosition = 0;
         yPosition = 0;
         roomCounter = 0;
 
     }
-/**
- * Prints Player's options
- * depending on which room they are in
- * and whether they have discovered all the rooms
- */
+
+    /**
+     * Prints Player's options
+     * depending on which room they are in
+     * and whether they have discovered all the rooms
+     */
     public static void showOptions() {
         System.out.println("\n\n Your options are:\n");
         if (checkLocation().equals("no room")) {
@@ -42,10 +43,13 @@ public class ClueMap {
             }
         }
     }
-/**
- * return which location the player is depending on their x and y position.
- * @return string player's location. Can be either a specific room, Outside, or the liminal "no room"
- */
+
+    /**
+     * return which location the player is depending on their x and y position.
+     * 
+     * @return string player's location. Can be either a specific room, Outside, or
+     *         the liminal "no room"
+     */
     public static String checkLocation() {
         if (xPosition >= -10 && xPosition <= -5 && yPosition <= 10 && yPosition >= 6) {
             return ("Kitchen");
@@ -75,11 +79,13 @@ public class ClueMap {
             return ("no room");
         }
     }
-/**
- * moves player where they want to go on the board
- * @param directionInput which direction the player wants to move
- * @param distanceInput how far they want to move in units
- */
+
+    /**
+     * moves player where they want to go on the board
+     * 
+     * @param directionInput which direction the player wants to move
+     * @param distanceInput  how far they want to move in units
+     */
     public static void move(String directionInput, int distanceInput) {
         if (directionInput.equals("A")) {
             yPosition = +distanceInput;
@@ -93,10 +99,11 @@ public class ClueMap {
         }
         movePrintOut();
     }
-/**
- * prints out where the player is after they move
- * if the player moves outside the board space, it returns them to start.
- */
+
+    /**
+     * prints out where the player is after they move
+     * if the player moves outside the board space, it returns them to start.
+     */
     public static void movePrintOut() {
         if (checkLocation().equals("no room")) {
             System.out.println(" You have not discovered a room. Try Again.");
@@ -112,10 +119,12 @@ public class ClueMap {
             System.out.println(" You are now in the " + ClueMap.checkLocation());
         }
     }
-/**
- * Let's player move to any room on the board automatically
- * @param location which location the player wants to go
- */
+
+    /**
+     * Let's player move to any room on the board automatically
+     * 
+     * @param location which location the player wants to go
+     */
     public static void secretDoor(String location) {
         if (location.equals("Kitchen")) {
             xPosition = -7;
