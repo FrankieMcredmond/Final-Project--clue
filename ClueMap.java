@@ -15,8 +15,20 @@ public class ClueMap {
 
     }
     public static void showOptions(){
-        if (roomCounter==8){System.out.println("Move, Accuse");}
-        else {System.out.println("Move");}
+        System.out.println("\n\n Your options are:\n");
+        if (checkLocation().equals("no room")){
+            if (roomCounter==8){
+                System.out.println(" -Move\n -Accuse\n -Map");}
+            else{System.out.println(" -Move");}}
+        else if (checkLocation().equals("Conservatory")) {
+            if (roomCounter==8){
+                System.out.println(" -Move\n -Look Around\n -Accuse\n -Map\n -Secret Door");}
+                else{System.out.println(" -Move\n -Look Around\n -Secret Door");}
+            }
+        else {
+            if (roomCounter==8){
+            System.out.println("-Move\n -Look Around\n -Accuse\n -Map");}
+            else{System.out.println(" -Move\n -Look Around");}}
     }
 
 
@@ -44,7 +56,7 @@ public class ClueMap {
 
 
     public static void move (String directionInput, int distanceInput){
-        
+        System.out.println("\n Move Selected: ");
         if (directionInput.equals ("A")){
             yPosition=+ distanceInput;}
         else if (directionInput.equals("B")){
@@ -54,17 +66,58 @@ public class ClueMap {
         else if (directionInput.equals("D")){
             xPosition=- distanceInput;}
         else{}
-        System.out.println(yPosition);
-        System.out.println( "You are now in the " +ClueMap.checkLocation());
+
+        if (checkLocation().equals("no room")){
+            System.out.println(" You have not discovered a room. Try Again.");
+            showOptions();
+        }
+        else {System.out.println( " You are now in the " +ClueMap.checkLocation());}
+    }
+
+
+    public static void secretDoor(String location){
+        if (location.equals("Kitchen")){
+            xPosition= -7 ;
+            yPosition= 8 ;
+        }
+        else if (location.equals("Ballroom")){
+            xPosition= -1 ;
+            yPosition= 8 ;
+        }
+        else if (location.equals("Billiard Room")){
+            xPosition= 6 ;
+            yPosition= 1 ;
+        }
+        else if (location.equals("Dining Room")){
+            xPosition= -7 ;
+            yPosition= 1 ;
+        }
+        else if (location.equals("Lounge")){
+            xPosition= -7 ;
+            yPosition= -7 ;
+        }
+        else if (location.equals("Hall")){
+            xPosition= 0 ;
+            yPosition= -8 ;
+        }
+        else if (location.equals("Study")){
+            xPosition= 7 ;
+            yPosition= -7 ;
+        }
+        else{System.out.println("The room you have entered does not exist. Try Again.");}
+        
     }
 
 
 
 
     public static void main(String[] args) {
-        ClueMap map= new ClueMap();
-        System.out.println(ClueMap.checkLocation());
-        map.move("A", 5);
+        new ClueMap();
+        move("A", 0);
+        move("A", 5);
+        showOptions();
+        move("B", 5);
+        showOptions();
 
 
 

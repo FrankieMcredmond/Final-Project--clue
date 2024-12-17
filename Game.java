@@ -62,7 +62,7 @@ public class Game extends Display {
                         System.out.println("You have two more guesses!");
                         guessCounter++; 
                         }}
-                 else if(response.equals("map")){
+                 else if(response.equals("Map")){
                    Display image = new Display(); 
                 
                 }
