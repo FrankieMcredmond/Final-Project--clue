@@ -64,7 +64,6 @@ public class ClueMap {
 
 
     public static void move (String directionInput, int distanceInput){
-        System.out.println("\n Move Selected: ");
         if (directionInput.equals ("A")){
             yPosition=+ distanceInput;}
         else if (directionInput.equals("B")){
@@ -98,32 +97,40 @@ public class ClueMap {
         if (location.equals("Kitchen")){
             xPosition= -7 ;
             yPosition= 8 ;
+            System.out.println( "\n You are now in the " +ClueMap.checkLocation());
         }
         else if (location.equals("Ballroom")){
             xPosition= -1 ;
             yPosition= 8 ;
+            System.out.println( "\n You are now in the " +ClueMap.checkLocation());
         }
         else if (location.equals("Billiard Room")){
             xPosition= 6 ;
             yPosition= 1 ;
+            System.out.println( "\n You are now in the " +ClueMap.checkLocation());
         }
         else if (location.equals("Dining Room")){
             xPosition= -7 ;
             yPosition= 1 ;
+            System.out.println( "\n You are now in the " +ClueMap.checkLocation());
         }
         else if (location.equals("Lounge")){
             xPosition= -7 ;
             yPosition= -7 ;
+            System.out.println( "\n You are now in the " +ClueMap.checkLocation());
         }
         else if (location.equals("Hall")){
             xPosition= 0 ;
             yPosition= -8 ;
+            System.out.println( "\n You are now in the " +ClueMap.checkLocation());
         }
         else if (location.equals("Study")){
             xPosition= 7 ;
             yPosition= -7 ;
+            System.out.println( "\n You are now in the " +ClueMap.checkLocation());
         }
-        else{System.out.println("The room you have entered does not exist. Try Again.");}
+        else{System.out.println("\n The room you have entered does not exist. Try Again.");}
+
         
     }
 
@@ -134,6 +141,7 @@ public class ClueMap {
         new ClueMap();
         move("A", 0);
         move("A", 12);
+        secretDoor("Kitchen");
         
 
 

@@ -20,6 +20,13 @@ public class Room {
         }
         else {System.out.println("This "+ this.weapon+ " doesn't have any blood on it, I guess it's not the weapon then");}
 
-    }}
+    }
+
+    public static void main(String[] args){
+        Room kitchen= new Room("kitchen", " ", "", true);
+        System.out.println (kitchen.name);
+    }
+
+}
 
 

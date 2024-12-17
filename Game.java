@@ -16,6 +16,7 @@ public class Game extends Display {
         
         
         public static void main(String[] args) throws IOException{
+            //Room kitchen= new Room(null, null, null);
             Scanner player = new Scanner(System.in); 
             System.out.println("Welcome Detective, thank you for making the journey on such short notice.");
             System.out.println("Please get started right away, here are the details:");
@@ -26,17 +27,17 @@ public class Game extends Display {
            do{
                 String response = player.nextLine(); 
                  if(response.contains("move")){
-                    System.out.println("Select A to move up \n Select B to move right \n Select C to move down \n Select D to move left");
+                    System.out.println("\n Select A to move up \n Select B to move right \n Select C to move down \n Select D to move left");
                     String directionInput= player.nextLine();
-                    System.out.println("Direction selected: " + directionInput);
-                    System.out.println("Enter how far you would like to move: ");
+                    System.out.println("\n Direction selected: " + directionInput);
+                    System.out.println("\n Enter how far you would like to move: ");
                     int distanceInput= player.nextInt();
-                    System.out.println("Distance selected: " + distanceInput);
+                    System.out.println("\n Distance selected: " + distanceInput);
                     ClueMap.move(directionInput, distanceInput); 
                     
                     }
                 else if(response.contains("look around")){
-                    //lookAround(); 
+                    
                     System.out.println("You are in a room!");
                     }
                 else if(response.contains("show options")){
