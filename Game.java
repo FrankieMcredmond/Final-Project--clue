@@ -94,8 +94,12 @@ public class Game extends Display {
                     System.out.println("You have two more guesses!");
                     guessCounter++;
                 }
-            } else if (response.equals("Map")) {
+            } else if (response.equals("map")) {
                 Display image = new Display();
+
+            }
+            else if (response.equals("add weapon")) {
+                
 
             }
 

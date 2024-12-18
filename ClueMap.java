@@ -88,14 +88,14 @@ public class ClueMap {
      */
     public static void move(String directionInput, int distanceInput) {
         if (directionInput.equals ("A")){
-            yPosition=+ distanceInput;}
+            yPosition =+ distanceInput;}
         else if (directionInput.equals("B")){
-            xPosition=+ distanceInput;}
+            xPosition =+ distanceInput;}
         else if (directionInput.equals("C")){
-            yPosition=- distanceInput;}
+            yPosition =- distanceInput;}
         else if (directionInput.equals("D")){
-            xPosition=- distanceInput;}
-        else{}
+            xPosition =- distanceInput;}
+        else{} 
         movePrintOut();
         System.out.println(yPosition + " " + xPosition);
     }
