@@ -23,14 +23,14 @@ public class Room {
      */
     public void lookAround() {
         System.out.println("\n \nYou found a Clue!!!! \n" + clue);
-        System.out.println("\n \n It looks like you found a possible weapon too!\n ");
+        System.out.println("\n \nIt looks like you found a possible weapon too! ");
         if (this.blood) {
             System.out.println("This " + this.weapon + " looks bloody. This could be the murder weapon!");
         } else {
             System.out
                     .println("This " + this.weapon + " doesn't have any blood on it, I guess it's not the weapon then.");
         }
-        System.out.println("You should update your lists to with these discoveries!");
+        System.out.println("\n You should update your lists with these discoveries!");
 
     }
 
