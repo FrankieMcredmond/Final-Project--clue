@@ -108,7 +108,7 @@ public class Game extends Display {
                 Person.removeSuspect(suspect);
             }
             else if (response.equals("suspect list")) {
-                Person.printList(); 
+                Person.printSuspectList(); 
             }
 
         } while (stillPlaying);
