@@ -72,9 +72,9 @@ public class Person {
             System.out.println(Person.suspectList.get(i));
         }
     }
-    /** 
-    * prints out the list of reamining weapons 
-   */
+/** 
+* prints out the list of reamining weapons 
+*/
        public static void printWeaponList(){
           System.out.println("The remaining weapons are:");
           System.out.println("---------------------------");
@@ -82,4 +82,14 @@ public class Person {
                System.out.println(Person.murderWeapons.get(i));
            }
        }
+/**
+ * prints out clue list */  
+    public static void printClueList(){
+        System.out.println("The clues you found are:");
+        System.out.println("---------------------------");
+         for(int i = 0; i < Person.clueList.size(); i++){
+             System.out.println(Person.clueList.get(i));
+         }
+     }
 }
+
