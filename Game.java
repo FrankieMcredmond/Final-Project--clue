@@ -31,6 +31,7 @@ public class Game extends Display {
         System.out.println("Your job is to figure out how Mr. Body died, where, and who did it");
         System.out.println("You'll only have three guesses so make them count!");
         do {
+            ClueMap.showOptions();
             String response = player.nextLine();
             if (response.contains("move")) {
                 System.out.println(
