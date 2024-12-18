@@ -28,8 +28,9 @@ public class Room {
             System.out.println("This " + this.weapon + " looks bloody. This could be the murder weapon!");
         } else {
             System.out
-                    .println("This " + this.weapon + " doesn't have any blood on it, I guess it's not the weapon then. You should add it to your weapon list!");
+                    .println("This " + this.weapon + " doesn't have any blood on it, I guess it's not the weapon then.");
         }
+        System.out.println("You should update your lists to with these discoveries!");
 
     }
 

@@ -99,7 +99,7 @@ public class Game extends Display {
                 Display image = new Display();
 
             }
-            else if (response.equals("add weapon")) {
+            else if (response.equals("edit weapon list")) {
                 System.out.println("What weapon would you like to add?");
                 String weapon = player.nextLine();
                 Person.addWeapon(weapon); 
