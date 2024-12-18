@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Person {
-    private static HashMap<String, Boolean> murderWeapons = new HashMap<>();
+    private static ArrayList<String> murderWeapons = new ArrayList<>(); 
     public static ArrayList<String> suspectList = new ArrayList<>();
     public static ArrayList<String> clueList=new ArrayList<>();
 /**
@@ -15,19 +15,27 @@ public class Person {
         suspectList.add("Mrs. Peacock");
         suspectList.add("Professor Plum");
         suspectList.add("Colonel Mustard"); 
+        murderWeapons.add("Candlestick");
+        murderWeapons.add("Knife");
+        murderWeapons.add("Wrench");
+        murderWeapons.add("Pool cue");
+        murderWeapons.add("Shovel");
+        murderWeapons.add("Poison");
+        murderWeapons.add("Rope");
+        murderWeapons.add("Revolver");
 
     }
  /**
-  * adds weapon to the list of possible murder weapons 
+  * removes weapon from the list of possible murder weapons 
   * @param weapon
   */
-    public static void addWeapon(String weapon) {
-        if(murderWeapons.containsKey(weapon)){
-            System.out.println("Weapon is already in the list!");
+    public static void removeWeapon(String weapon) {
+        if(murderWeapons.contains(weapon)){
+            murderWeapons.remove(weapon); 
+            System.out.println("The weapon is no longer in the list!");
         }
         else {
-         murderWeapons.put(weapon, true);
-         System.out.println("Weapon added to the list!"); }
+         System.out.println("That weapon is not in the list, try again!"); }
 
     }
 /**
@@ -64,11 +72,14 @@ public class Person {
             System.out.println(Person.suspectList.get(i));
         }
     }
-    public static void printWeaponList(){
-        System.out.println("The possible weapons are:");
-        System.out.println("---------------------------");
-         for(int i = 0; i < murderWeapons.; i++){
-             System.out.println(suspectList.get(i));
-         }
-     }
+    /** 
+    * prints out the list of reamining weapons 
+   */
+       public static void printWeaponList(){
+          System.out.println("The remaining weapons are:");
+          System.out.println("---------------------------");
+           for(int i = 0; i < Person.murderWeapons.size(); i++){
+               System.out.println(Person.murderWeapons.get(i));
+           }
+       }
 }
