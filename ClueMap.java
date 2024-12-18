@@ -25,21 +25,21 @@ public class ClueMap {
         System.out.println("\n\n Your options are:\n");
         if (checkLocation().equals("no room")) {
             if (roomCounter == 8) {
-                System.out.println(" -move\n -edit weapon list\n -edit suspect list\n -accuse\n -map");
+                System.out.println(" -move\n -edit weapon list\n -edit suspect list\n -print evidence\n -accuse\n -map");
             } else {
-                System.out.println(" -move\n -edit weapon list\n -edit suspect list");
+                System.out.println(" -move\n -edit weapon list\n -edit suspect list\n -print evidence");
             }
         } else if (checkLocation().equals("Conservatory")) {
             if (roomCounter == 8) {
-                System.out.println(" -move\n -look Around\n -edit weapon list\n -edit suspect list\n -accuse\n -map\n -secret door");
+                System.out.println(" -move\n -look around\n -edit weapon list\n -edit suspect list\n -print evidence\n -accuse\n -map\n -secret door");
             } else {
-                System.out.println(" -move\n -look Around\n -edit weapon list\n -edit suspect list\n -secret door");
+                System.out.println(" -move\n -look around\n -edit weapon list\n -edit suspect list\n -print evidence\n -secret door");
             }
         } else {
             if (roomCounter == 8) {
-                System.out.println("-move\n -look around\n -edit weapon list\n -edit suspect list\n -accuse\n -map");
+                System.out.println("-move\n -look around\n -edit weapon list\n -edit suspect list\n -print evidence\n -accuse\n -map");
             } else {
-                System.out.println(" -move\n -look around\n -edit weapon list\n -edit suspect list");
+                System.out.println(" -move\n -look around\n -edit weapon list\n -edit suspect list\n -print evidence");
             }
         }
     }
