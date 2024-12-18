@@ -25,21 +25,21 @@ public class ClueMap {
         System.out.println("\n\n Your options are:\n");
         if (checkLocation().equals("no room")) {
             if (roomCounter == 8) {
-                System.out.println(" -Move\n -Accuse\n -Map");
+                System.out.println(" -move\n -accuse\n -map");
             } else {
-                System.out.println(" -Move");
+                System.out.println(" -move");
             }
         } else if (checkLocation().equals("Conservatory")) {
             if (roomCounter == 8) {
-                System.out.println(" -Move\n -Look Around\n -Accuse\n -Map\n -Secret Door");
+                System.out.println(" -move\n -look Around\n -accuse\n -map\n -secret door");
             } else {
-                System.out.println(" -Move\n -Look Around\n -Secret Door");
+                System.out.println(" -move\n -look Around\n -secret door");
             }
         } else {
             if (roomCounter == 8) {
-                System.out.println("-Move\n -Look Around\n -Accuse\n -Map");
+                System.out.println("-move\n -look around\n -accuse\n -map");
             } else {
-                System.out.println(" -Move\n -Look Around");
+                System.out.println(" -move\n -look around");
             }
         }
     }
@@ -107,14 +107,12 @@ public class ClueMap {
     public static void movePrintOut() {
         if (checkLocation().equals("no room")) {
             System.out.println(" You have not discovered a room. Try Again.");
-            showOptions();
         } else if (checkLocation().equals("Outside")) {
             System.out.println(
                     "\n\n  You accidentally walked outside *THUNDER* You better get back inside before the guard dogs get to you...");
             xPosition = 0;
             yPosition = 0;
             System.out.println("\n.....\n\n You are now back at your start point safe and sound, only soaking wet.");
-            showOptions();
         } else {
             System.out.println(" You are now in the " + ClueMap.checkLocation());
         }
