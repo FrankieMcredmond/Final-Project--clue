@@ -22,7 +22,7 @@ public class Game extends Display {
         ClueMap test = new ClueMap(); 
         Person call = new Person(); 
         Scanner player = new Scanner(System.in);
-        System.out.println("Welcome Detective, thank you for making the journey on such short notice.");
+        System.out.println("\nWelcome Detective, thank you for making the journey on such short notice.");
         System.out.println("Please get started right away, here are the details:");
         System.out.println(
                 "Yvette the Maid found Mr. Body dead in the lobby around 9 pm but it was obvious his body had been placed there.");
@@ -103,32 +103,38 @@ public class Game extends Display {
                 System.out.println("What weapon would you like to add?");
                 String weapon = player.nextLine();
                 Person.removeWeapon(weapon); 
+                ClueMap.showOptions();
             }
             else if (response.equals("edit suspect list")) {
                 System.out.println("What suspect would you like to remove?");
                 String suspect = player.nextLine();
                 Person.removeSuspect(suspect);
+                ClueMap.showOptions();
             }
             else if (response.equals("suspect list")) {
                 Person.printSuspectList(); 
+                ClueMap.showOptions();
             }
             else if (response.equals("secret door")) {
                 System.out.println("Where would you like to go?");
                 String room = player.nextLine(); 
                 ClueMap.secretDoor(room);
+                ClueMap.showOptions();
             }
             else if(response.equals("clues")){
                 System.out.println("Here are the clues:");
                 Person.printClueList();
+                ClueMap.showOptions();
             }
             else if (response.equals("print evidence")) {
-                System.out.println("Here's everything you know so far:");
+                System.out.println("\nHere's everything you know so far:");
                 System.out.println("----------------------------------");
                 Person.printSuspectList();
                 System.out.println();
                 Person.printWeaponList();
                 System.out.println();
                 Person.printClueList(); 
+                ClueMap.showOptions();
             }
         
 
