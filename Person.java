@@ -50,7 +50,7 @@ public class Person {
  * @param clue
  */
     public static void addClue(String name, String clue){
-        clueList.add(name+": "+clue);
+        clueList.add(name+":  "+clue);
     }
 
 
