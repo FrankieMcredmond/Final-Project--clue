@@ -97,7 +97,7 @@ public class ClueMap {
             xPosition =- distanceInput;}
         else{} 
         movePrintOut();
-        System.out.println(yPosition + " " + xPosition);
+        System.out.println(" Coordinates: " +xPosition + ", " + yPosition);
     }
 
     /**
@@ -155,6 +155,7 @@ public class ClueMap {
         } else {
             System.out.println("\n The room you have entered does not exist. Try Again.");
         }
+        System.out.println(" Coordinates: " +xPosition + ", " + yPosition);
 
     }
 
