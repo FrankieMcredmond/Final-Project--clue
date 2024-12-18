@@ -97,6 +97,7 @@ public class ClueMap {
             xPosition=- distanceInput;}
         else{}
         movePrintOut();
+        System.out.println(yPosition + " " + xPosition);
     }
 
     /**
@@ -162,7 +163,7 @@ public class ClueMap {
     public static void main(String[] args) {
         new ClueMap();
         move("A", 0);
-        move("A", 12);
+        move("A", 6);
         secretDoor("Kitchen");
 
     }

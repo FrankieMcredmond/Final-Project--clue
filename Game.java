@@ -20,8 +20,9 @@ public class Game extends Display {
         Room billiardRoom = new Room("Billiard Room", null, null, false);
         Room diningRoom = new Room("Dining Room", null, null, true);
         Room study = new Room("Study", null, null, false);
-        Room Hall = new Room("Hall", null, null, false);
+        Room hall = new Room("Hall", null, null, false);
         Room lounge = new Room("Lounge", null, null, false);
+        ClueMap test = new ClueMap(); 
         Scanner player = new Scanner(System.in);
         System.out.println("Welcome Detective, thank you for making the journey on such short notice.");
         System.out.println("Please get started right away, here are the details:");
@@ -44,8 +45,36 @@ public class Game extends Display {
                 ClueMap.move(directionInput, distanceInput);
 
             } else if (response.contains("look around")) {
-
-                System.out.println("You are in a room!");
+                if(ClueMap.checkLocation().equals("Kitchen")){
+                    kitchen.lookAround(); 
+                }
+                else if(ClueMap.checkLocation().equals("Lounge")){
+                    lounge.lookAround(); 
+                }
+                else if(ClueMap.checkLocation().equals("Ballroom")){
+                    ballroom.lookAround(); 
+                }
+                else if(ClueMap.checkLocation().equals("Study")){
+                    study.lookAround(); 
+                }
+                else if(ClueMap.checkLocation().equals("Conservatory")){
+                    conservatory.lookAround(); 
+                }
+                else if(ClueMap.checkLocation().equals("Billiard Room")){
+                    billiardRoom.lookAround(); 
+                } 
+                else if(ClueMap.checkLocation().equals("Dining Room")){
+                    diningRoom.lookAround(); 
+                }
+                else if(ClueMap.checkLocation().equals("Hall")){
+                    hall.lookAround(); 
+                }
+                else if(ClueMap.checkLocation().equals("Outside")){
+                    System.out.println("You are outside, please reenter the house.");
+                }
+                else{
+                    System.out.println("You are not in a room, keep moving around.");
+                }
             } else if (response.contains("show options")) {
                 ClueMap.showOptions();
             } else if (response.contains("accuse")) {
