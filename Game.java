@@ -97,10 +97,10 @@ public class Game extends Display {
                 Display image = new Display();
 
             }
-            else if (response.equals("add weapon")) {
+            else if (response.equals("edit weapon list")) {
                 System.out.println("What weapon would you like to add?");
                 String weapon = player.nextLine();
-                Person.addWeapon(weapon); 
+                Person.removeWeapon(weapon); 
             }
             else if (response.equals("edit suspect list")) {
                 System.out.println("What suspect would you like to remove?");
@@ -110,6 +110,20 @@ public class Game extends Display {
             else if (response.equals("suspect list")) {
                 Person.printSuspectList(); 
             }
+            else if (response.equals("secret door")) {
+                System.out.println("Where would you like to go?");
+                String room = player.nextLine(); 
+                ClueMap.secretDoor(room);
+            }
+            else if (response.equals("print evidence")) {
+                System.out.println("Here's everything you know so far:");
+                System.out.println("----------------------------------");
+                Person.printSuspectList();
+                System.out.println();
+                Person.printWeaponList();
+                
+            }
+        
 
         } while (stillPlaying);
         player.close();

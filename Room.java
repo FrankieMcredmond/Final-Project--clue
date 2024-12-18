@@ -23,6 +23,7 @@ public class Room {
      */
     public void lookAround() {
         System.out.println("You found a Clue!!!! \n" + clue);
+        
         System.out.println("\n \n It looks like you found a possible weapon too!\n ");
         if (this.blood) {
             System.out.println("This " + this.weapon + " looks bloody. This could be the murder weapon!");
