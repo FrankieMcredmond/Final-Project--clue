@@ -31,15 +31,15 @@ public class ClueMap {
             }
         } else if (checkLocation().equals("Conservatory")) {
             if (roomCounter == 8) {
-                System.out.println(" -move\n -look Around\n -accuse\n -map\n -secret door");
+                System.out.println(" -move\n -look Around\n -add weapon\n -accuse\n -map\n -secret door");
             } else {
-                System.out.println(" -move\n -look Around\n -secret door");
+                System.out.println(" -move\n -look Around\n -add weapon\n -secret door");
             }
         } else {
             if (roomCounter == 8) {
-                System.out.println("-move\n -look around\n -accuse\n -map");
+                System.out.println("-move\n -look around\n -add weapon\n -accuse\n -map");
             } else {
-                System.out.println(" -move\n -look around");
+                System.out.println(" -move\n -look around\n -add weapon");
             }
         }
     }

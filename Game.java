@@ -32,8 +32,8 @@ public class Game extends Display {
                 "Six people were here for a dinner party, Mrs. White, Ms. Scarlet, Mrs. Peacock, Colonel Mustard, Professor Plum, and Mr. Green.");
         System.out.println("Your job is to figure out how Mr. Body died, where, and who did it");
         System.out.println("You'll only have three guesses so make them count!");
+        ClueMap.showOptions();
         do {
-            ClueMap.showOptions();
             String response = player.nextLine();
             if (response.contains("move")) {
                 System.out.println(
@@ -44,6 +44,7 @@ public class Game extends Display {
                 int distanceInput = player.nextInt();
                 System.out.println("\n Distance selected: " + distanceInput);
                 ClueMap.move(directionInput, distanceInput);
+                ClueMap.showOptions();
 
             } else if (response.contains("look around")) {
                 if(ClueMap.checkLocation().equals("Kitchen")){
@@ -76,6 +77,7 @@ public class Game extends Display {
                 else{
                     System.out.println("You are not in a room, keep moving around.");
                 }
+                ClueMap.showOptions();
             } else if (response.contains("show options")) {
                 ClueMap.showOptions();
             } else if (response.contains("accuse")) {
