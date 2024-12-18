@@ -99,7 +99,7 @@ public class Game extends Display {
 
             }
             else if (response.equals("add weapon")) {
-                
+                System.out.println("");
 
             }
 
