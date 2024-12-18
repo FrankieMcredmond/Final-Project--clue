@@ -22,15 +22,16 @@ public class Room {
      * prints out the clue of that room, and it's weapon
      */
     public void lookAround() {
-        System.out.println("You found a Clue!!!! \n" + clue);
-        
-        System.out.println("\n \n It looks like you found a possible weapon too!\n ");
+        System.out.println("\n \nYou found a Clue!!!! \n" + clue);
+        Person.addClue(this.name, this.clue);
+        System.out.println("\n \nIt looks like you found a possible weapon too! ");
         if (this.blood) {
             System.out.println("This " + this.weapon + " looks bloody. This could be the murder weapon!");
         } else {
             System.out
-                    .println("This " + this.weapon + " doesn't have any blood on it, I guess it's not the weapon then");
+                    .println("This " + this.weapon + " doesn't have any blood on it, I guess it's not the weapon then.");
         }
+        System.out.println("\n You should update your lists with these discoveries!");
 
     }
 

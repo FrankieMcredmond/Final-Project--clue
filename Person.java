@@ -4,6 +4,7 @@ import java.util.HashMap;
 public class Person {
     private static ArrayList<String> murderWeapons = new ArrayList<>(); 
     public static ArrayList<String> suspectList = new ArrayList<>();
+    public static ArrayList<String> clueList=new ArrayList<>();
 /**
  * Person constructor that initializes the suspect list
  */
@@ -51,6 +52,16 @@ public class Person {
         }
 
     }
+/**
+ * adds clue to clue arraylist. Puts Room name before for organization.
+ * @param name
+ * @param clue
+ */
+    public static void addClue(String name, String clue){
+        clueList.add(name+": "+clue);
+    }
+
+
 /** 
  * prints out the list of reamining suspects 
 */

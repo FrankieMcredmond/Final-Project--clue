@@ -25,21 +25,21 @@ public class ClueMap {
         System.out.println("\n\n Your options are:\n");
         if (checkLocation().equals("no room")) {
             if (roomCounter == 8) {
-                System.out.println(" -move\n -accuse\n -map");
+                System.out.println(" -move\n -edit weapon list\n -edit suspect list\n -accuse\n -map");
             } else {
-                System.out.println(" -move");
+                System.out.println(" -move\n -edit weapon list\n -edit suspect list");
             }
         } else if (checkLocation().equals("Conservatory")) {
             if (roomCounter == 8) {
-                System.out.println(" -move\n -look Around\n -accuse\n -map\n -secret door");
+                System.out.println(" -move\n -look Around\n -edit weapon list\n -edit suspect list\n -accuse\n -map\n -secret door");
             } else {
-                System.out.println(" -move\n -look Around\n -secret door");
+                System.out.println(" -move\n -look Around\n -edit weapon list\n -edit suspect list\n -secret door");
             }
         } else {
             if (roomCounter == 8) {
-                System.out.println("-move\n -look around\n -accuse\n -map");
+                System.out.println("-move\n -look around\n -edit weapon list\n -edit suspect list\n -accuse\n -map");
             } else {
-                System.out.println(" -move\n -look around");
+                System.out.println(" -move\n -look around\n -edit weapon list\n -edit suspect list");
             }
         }
     }
@@ -97,7 +97,7 @@ public class ClueMap {
             xPosition =- distanceInput;}
         else{} 
         movePrintOut();
-        System.out.println(yPosition + " " + xPosition);
+        System.out.println(" Coordinates: " +xPosition + ", " + yPosition);
     }
 
     /**
@@ -155,6 +155,7 @@ public class ClueMap {
         } else {
             System.out.println("\n The room you have entered does not exist. Try Again.");
         }
+        System.out.println(" Coordinates: " +xPosition + ", " + yPosition);
 
     }
 
