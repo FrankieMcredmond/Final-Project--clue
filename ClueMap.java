@@ -104,7 +104,6 @@ public class ClueMap {
      * if the player moves outside the board space, it returns them to start.
      */
     public static void movePrintOut() {
-        System.out.println(xPosition+ yPosition);
         if (checkLocation().equals("no room")) {
             System.out.println(" You have not discovered a room. Try Again.");
             showOptions();
