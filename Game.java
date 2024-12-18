@@ -117,13 +117,18 @@ public class Game extends Display {
                 String room = player.nextLine(); 
                 ClueMap.secretDoor(room);
             }
+            else if(response.equals("clues")){
+                System.out.println("Here are the clues:");
+                Person.printClueList();
+            }
             else if (response.equals("print evidence")) {
                 System.out.println("Here's everything you know so far:");
                 System.out.println("----------------------------------");
                 Person.printSuspectList();
                 System.out.println();
                 Person.printWeaponList();
-                
+                System.out.println();
+                Person.printClueList(); 
             }
         
 
