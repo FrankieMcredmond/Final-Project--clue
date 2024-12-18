@@ -7,22 +7,20 @@ public class Game extends Display {
         // TODO Auto-generated constructor stub
     }
 
-    private String murderer;
-    private String murderWeapon;
-    private String murderPlace;
     private static boolean stillPlaying = true;
     private static int guessCounter = 0;
 
     public static void main(String[] args) throws IOException {
-        Room kitchen = new Room("Kitchen", null, null, false);
-        Room ballroom = new Room("Ballroom", null, null, false);
-        Room conservatory = new Room("Conservatory", null, null, false);
-        Room billiardRoom = new Room("Billiard Room", null, null, false);
-        Room diningRoom = new Room("Dining Room", null, null, true);
-        Room study = new Room("Study", null, null, false);
-        Room hall = new Room("Hall", null, null, false);
-        Room lounge = new Room("Lounge", null, null, false);
+        Room kitchen = new Room("Kitchen", "This place is a disaster! Mrs. White and Mrs. Peacock were in here for hours fighting over the shark fin soup!", "Knife", false);
+        Room ballroom = new Room("Ballroom", "The ballroom was full of music, they had got to the tipsy dancing portion of the night. I heard Colonel Mustard stepped on Plum’s foot!", "Wrench", false);
+        Room conservatory = new Room("Conservatory", "The gardner said after the lights went out he saw someone rushing into the conservatory. Though he didn’t see who it was, he said they were coming from the dining room.", "Rope", false);
+        Room billiardRoom = new Room("Billiard Room", "The balls are all over the pool table, looks like people were in the middle of a game when this occured.", "Pool cue", false);
+        Room diningRoom = new Room("Dining Room", "This room looks untouched. Absolutely spotless. Almost too spotless for after a dinner party.", "Candlestick", true);
+        Room study = new Room("Study", "A crumpled note in the trash reads, 'Meet me in the dining room. Bring no one. G." , "Revolver", false);
+        Room hall = new Room("Hall", "The groundskeeper was walking in and out of here all night, nothing would have happened without him knowing.", "Shovel", false);
+        Room lounge = new Room("Lounge","The piano in the lounge had sheet music with a big S across the top on the bench. She must have been playing during the commotion." , "Poison", false);
         ClueMap test = new ClueMap(); 
+        Person call = new Person(); 
         Scanner player = new Scanner(System.in);
         System.out.println("Welcome Detective, thank you for making the journey on such short notice.");
         System.out.println("Please get started right away, here are the details:");
@@ -99,8 +97,17 @@ public class Game extends Display {
 
             }
             else if (response.equals("add weapon")) {
-                System.out.println("");
-
+                System.out.println("What weapon would you like to add?");
+                String weapon = player.nextLine();
+                Person.addWeapon(weapon); 
+            }
+            else if (response.equals("edit suspect list")) {
+                System.out.println("What suspect would you like to remove?");
+                String suspect = player.nextLine();
+                Person.removeSuspect(suspect);
+            }
+            else if (response.equals("suspect list")) {
+                Person.printList(); 
             }
 
         } while (stillPlaying);
