@@ -87,16 +87,15 @@ public class ClueMap {
      * @param distanceInput  how far they want to move in units
      */
     public static void move(String directionInput, int distanceInput) {
-        if (directionInput.equals("A")) {
-            yPosition = +distanceInput;
-        } else if (directionInput.equals("B")) {
-            xPosition = +distanceInput;
-        } else if (directionInput.equals("C")) {
-            yPosition = -distanceInput;
-        } else if (directionInput.equals("D")) {
-            xPosition = -distanceInput;
-        } else {
-        }
+        if (directionInput.equals ("A")){
+            yPosition=+ distanceInput;}
+        else if (directionInput.equals("B")){
+            xPosition=+ distanceInput;}
+        else if (directionInput.equals("C")){
+            yPosition=- distanceInput;}
+        else if (directionInput.equals("D")){
+            xPosition=- distanceInput;}
+        else{}
         movePrintOut();
     }
 
@@ -105,6 +104,7 @@ public class ClueMap {
      * if the player moves outside the board space, it returns them to start.
      */
     public static void movePrintOut() {
+        System.out.println(xPosition+ yPosition);
         if (checkLocation().equals("no room")) {
             System.out.println(" You have not discovered a room. Try Again.");
             showOptions();
