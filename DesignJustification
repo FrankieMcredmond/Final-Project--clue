@@ -1,0 +1,8 @@
+Our main concept when designing for this game was that we wanted it to be similar to the board game clue, but since it's a text based game we can't have some of the original challenges within the board game. For example, in the board game, part of the fun is the multiplayer aspect, where you need to find clues by grabbing cards from other players. We couldn't do that, so we added some twists.
+
+The first twist we added was that the player would not know where all the rooms are in the beginning of the game. Instead they would need to wander around. This made our clue game also incorporate elements of the game battle ship, where you are rewarded for deducing where a room could be. The player can get around this though, by finding the secret door in the Conservatory.
+
+We also had the player get actual written clues, rather than a yes or no response to a person, place, and weapon guess like in the board game, to make players have to extrapolate deductions. Once they look around a room and find clues, They can then edit their lists from the clues they gather.
+
+We also chose to let a player make three accusations, rather than just one. Our game is a little harder than the board game, so we figured we should loosen the reigns a bit.
+

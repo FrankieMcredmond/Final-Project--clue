@@ -59,6 +59,7 @@ public class Person {
  */
     public static void addClue(String name, String clue){
         clueList.add(name+":  "+clue);
+        ClueMap.roomCounter+=1;
     }
 
 
